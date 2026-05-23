@@ -23,7 +23,7 @@
    - `main-QY6M2GAO.js`
 2. 将这些 bundle 放入 `code/` 并构造本地 `index.html`，保留 Angular 的 `<app-root>` 启动方式。
 3. 从 bundle 中定位首页粒子组件 `landing-main-particles-component`，确认原站直接使用 Three.js 场景和 shader/FBO 粒子模拟。
-4. 下载并整理 bundle 引用的静态资源，包括图片、视频、博客 Markdown、文档 Markdown、懒加载语法高亮 chunk 和字体文件等。
+4. 下载并整理 bundle 引用的静态资源，包括图片、视频、博客 Markdown、文档 Markdown、懒加载语法高亮 chunk 等。字体使用官方在线 Google Fonts 链接，避免本地化字体带来的字重、字宽和图标度量差异。
 5. 增加本地 `server.mjs`，解决普通静态服务器无法处理的两个问题：
    - Angular 深链接需要 fallback 到 `index.html`；
    - MP4 视频需要支持 `Range` 请求。
@@ -36,7 +36,7 @@
 - `ringDisplacement=.62`
 - `density=230`
 
-由于动画逻辑、shader、布局 CSS 和资源路径都来自公开 bundle，本地效果不会依赖手工近似实现。
+由于动画逻辑、shader、布局 CSS、字体来源和资源路径都与公开站点保持一致，本地效果不会依赖手工近似实现。
 
 ## 运行方式
 
